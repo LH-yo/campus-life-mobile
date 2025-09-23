@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>校园新闻 - 校园生活</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/images.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <div class="back-btn" onclick="history.back()">
+                <span>‹</span>
+            </div>
+            <h1 class="page-title">校园新闻</h1>
+            <div class="search-btn" onclick="showSearch()">
+                🔍
+            </div>
+        </div>
+    </header>
+
+    <!-- 新闻分类标签 -->
+    <div class="news-tabs">
+        <div class="tabs-wrapper">
+            <span class="tab-item active" data-type="all">全部</span>
+            <span class="tab-item" data-type="notice">通知公告</span>
+            <span class="tab-item" data-type="academic">学术动态</span>
+            <span class="tab-item" data-type="activity">校园活动</span>
+            <span class="tab-item" data-type="sports">体育赛事</span>
+            <span class="tab-item" data-type="culture">文化艺术</span>
+        </div>
+    </div>
+
+    <!-- 新闻列表容器 -->
+    <div class="news-container">
+        <!-- 置顶新闻 -->
+        <div class="top-news">
+            <div class="top-badge">置顶</div>
+            <h2 onclick="location.href='404.html'">我校获批国家级重点实验室建设项目</h2>
+            <div class="top-meta">
+                <span>学校官网</span>
+                <span>•</span>
+                <span>3小时前</span>
+                <span>•</span>
+                <span>8.5k阅读</span>
+            </div>
+        </div>
+
+        <!-- 普通新闻列表 -->
+        <div class="news-list" id="newsList">
+            <!-- 新闻项目1 -->
+            <article class="news-item" onclick="location.href='news-detail.html?id=1'">
+                <div class="news-main">
+                    <h3>春季运动会圆满落幕，体育健儿创佳绩</h3>
+                    <p class="news-desc">为期三天的春季运动会在体育场圆满落幕，各学院运动健儿奋力拼搏，共打破5项校记录...</p>
+                    <div class="news-footer">
+                        <span class="news-source">体育部</span>
+                        <span class="news-time">1小时前</span>
+                        <span class="news-stats">2.3k阅读</span>
+                    </div>
+                </div>
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=300&h=200&fit=crop" alt="运动会" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+                </div>
+            </article>
+
+            <!-- 新闻项目2 -->
+            <article class="news-item" onclick="location.href='404.html'">
+                <div class="news-main">
+                    <h3>图书馆新增24小时自习室，考研学子有福了</h3>
+                    <p class="news-desc">为满足广大学子的学习需求，图书馆将在北楼新开设24小时自习室，配备空调、饮水机等设施...</p>
+                    <div class="news-footer">
+                        <span class="news-source">图书馆</span>
+                        <span class="news-time">3小时前</span>
+                        <span class="news-stats">5.1k阅读</span>
+                    </div>
+                </div>
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=200&fit=crop" alt="图书馆" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+                </div>
+            </article>
+
+            <!-- 新闻项目3 -->
+            <article class="news-item" onclick="location.href='news-detail.html?id=3'">
+                <div class="news-main">
+                    <h3>学生会招新开始啦！快来加入我们</h3>
+                    <p class="news-desc">新学期新气象，学生会各部门开始招新工作。欢迎有热情、有能力的同学加入我们的大家庭...</p>
+                    <div class="news-footer">
+                        <span class="news-source">学生会</span>
+                        <span class="news-time">5小时前</span>
+                        <span class="news-stats">1.8k阅读</span>
+                    </div>
+                </div>
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=300&h=200&fit=crop" alt="学生会" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+                </div>
+            </article>
+
+            <!-- 新闻项目4 -->
+            <article class="news-item no-image" onclick="location.href='news-detail.html?id=4'">
+                <h3>关于调整食堂营业时间的通知</h3>
+                <p class="news-desc">根据同学们的反馈和实际需求，经研究决定，从下周一起调整各食堂营业时间，早餐提前至6:30开始供应...</p>
+                <div class="news-footer">
+                    <span class="news-source">后勤处</span>
+                    <span class="news-time">昨天</span>
+                    <span class="news-stats">892阅读</span>
+                </div>
+            </article>
+
+            <!-- 新闻项目5 -->
+            <article class="news-item" onclick="location.href='404.html'">
+                <div class="news-main">
+                    <h3>校园文化节精彩纷呈，展现青春风采</h3>
+                    <p class="news-desc">一年一度的校园文化节正式拉开帷幕，歌舞表演、书法展览、摄影大赛等活动精彩纷呈...</p>
+                    <div class="news-footer">
+                        <span class="news-source">团委</span>
+                        <span class="news-time">昨天</span>
+                        <span class="news-stats">3.2k阅读</span>
+                    </div>
+                </div>
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?w=300&h=200&fit=crop" alt="文化节" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+                </div>
+            </article>
+        </div>
+
+        <!-- 加载更多 -->
+        <div class="load-more" id="loadMore">
+            <span>上拉加载更多</span>
+        </div>
+    </div>
+
+    <!-- 搜索弹窗 -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-header">
+            <input type="text" class="search-input" placeholder="搜索新闻..." id="searchInput">
+            <span class="search-cancel" onclick="hideSearch()">取消</span>
+        </div>
+        <div class="search-hot">
+            <h4>热门搜索</h4>
+            <div class="hot-tags">
+                <span class="hot-tag">运动会</span>
+                <span class="hot-tag">图书馆</span>
+                <span class="hot-tag">考研</span>
+                <span class="hot-tag">食堂</span>
+                <span class="hot-tag">招聘会</span>
+                <span class="hot-tag">奖学金</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航 -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>首页</span>
+        </a>
+        <a href="news.html" class="nav-item active">
+            <span class="nav-icon">📰</span>
+            <span>新闻</span>
+        </a>
+        <a href="service.html" class="nav-item">
+            <span class="nav-icon">⚡</span>
+            <span>服务</span>
+        </a>
+        <a href="personal.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/common.js"></script>
+    <script src="js/news.js"></script>
+</body>
+</html>

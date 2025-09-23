@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>校园论坛 - 校园生活</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        body { padding-top: 50px; background: #f5f5f5; }
+        .post-list { padding: 10px 0; }
+        .post-card {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-right: 10px;
+        }
+        .author-info {
+            flex: 1;
+        }
+        .author-name {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 3px;
+        }
+        .post-time {
+            font-size: 12px;
+            color: #999;
+        }
+        .post-tag {
+            padding: 3px 8px;
+            background: #f5f5f5;
+            color: #666;
+            font-size: 11px;
+            border-radius: 10px;
+        }
+        .post-content {
+            margin-bottom: 10px;
+        }
+        .post-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .post-text {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .post-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            margin: 10px 0;
+        }
+        .post-img {
+            width: 100%;
+            height: 100px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+        .post-footer {
+            display: flex;
+            justify-content: space-around;
+            padding-top: 10px;
+            border-top: 1px solid #f5f5f5;
+        }
+        .post-action {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #999;
+            cursor: pointer;
+        }
+        .post-action span {
+            margin-left: 5px;
+        }
+        .hot-topic {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .topic-title {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+        .topic-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .topic-item {
+            padding: 5px 12px;
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            border-radius: 15px;
+            font-size: 13px;
+            color: #6c5ce7;
+        }
+        .post-btn {
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(9, 132, 227, 0.4);
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="back-btn" onclick="history.back()">
+                <span>‹</span>
+            </div>
+            <h1 class="page-title">校园论坛</h1>
+            <div class="search-btn">🔍</div>
+        </div>
+    </header>
+
+    <div class="hot-topic">
+        <h3 class="topic-title">🔥 热门话题</h3>
+        <div class="topic-list">
+            <span class="topic-item">#期末考试</span>
+            <span class="topic-item">#食堂新菜</span>
+            <span class="topic-item">#宿舍趣事</span>
+            <span class="topic-item">#校园恋爱</span>
+            <span class="topic-item">#实习分享</span>
+        </div>
+    </div>
+
+    <div class="post-list">
+        <div class="post-card" onclick="location.href='post-detail.html?id=1'">
+            <div class="post-header">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <div class="author-name">匿名树洞</div>
+                    <div class="post-time">10分钟前</div>
+                </div>
+                <span class="post-tag">树洞</span>
+            </div>
+            <div class="post-content">
+                <h3 class="post-title">期末复习太难了，有人一起组队学习吗？</h3>
+                <p class="post-text">马上要期末考试了，高数和线代完全看不懂啊！有没有学霸愿意带带我，或者一起组个学习小组，相互督促学习。我在图书馆三楼经常自习...</p>
+            </div>
+            <div class="post-footer">
+                <div class="post-action">
+                    <span>👍</span>
+                    <span>256</span>
+                </div>
+                <div class="post-action">
+                    <span>💬</span>
+                    <span>45</span>
+                </div>
+                <div class="post-action">
+                    <span>⭐</span>
+                    <span>收藏</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-card" onclick="location.href='post-detail.html?id=2'">
+            <div class="post-header">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <div class="author-name">吃货小分队</div>
+                    <div class="post-time">1小时前</div>
+                </div>
+                <span class="post-tag">美食</span>
+            </div>
+            <div class="post-content">
+                <h3 class="post-title">发现学校后街一家超好吃的小店！</h3>
+                <p class="post-text">就在后街左拐第三家，他家的麻辣烫真的绝了！汤底特别浓郁，食材也很新鲜，老板人超好...</p>
+                <div class="post-images">
+                    <div class="post-img"></div>
+                    <div class="post-img"></div>
+                    <div class="post-img"></div>
+                </div>
+            </div>
+            <div class="post-footer">
+                <div class="post-action">
+                    <span>👍</span>
+                    <span>523</span>
+                </div>
+                <div class="post-action">
+                    <span>💬</span>
+                    <span>89</span>
+                </div>
+                <div class="post-action">
+                    <span>⭐</span>
+                    <span>收藏</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-card" onclick="location.href='post-detail.html?id=3'">
+            <div class="post-header">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <div class="author-name">校园摄影师</div>
+                    <div class="post-time">3小时前</div>
+                </div>
+                <span class="post-tag">摄影</span>
+            </div>
+            <div class="post-content">
+                <h3 class="post-title">分享一组今天拍的校园夕阳照</h3>
+                <p class="post-text">今天傍晚的夕阳真的太美了，在梧桐大道拍了一组照片分享给大家～</p>
+                <div class="post-images">
+                    <div class="post-img"></div>
+                    <div class="post-img"></div>
+                    <div class="post-img"></div>
+                    <div class="post-img"></div>
+                    <div class="post-img"></div>
+                    <div class="post-img"></div>
+                </div>
+            </div>
+            <div class="post-footer">
+                <div class="post-action">
+                    <span>👍</span>
+                    <span>892</span>
+                </div>
+                <div class="post-action">
+                    <span>💬</span>
+                    <span>126</span>
+                </div>
+                <div class="post-action">
+                    <span>⭐</span>
+                    <span>收藏</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-btn">✏️</div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>首页</span>
+        </a>
+        <a href="news.html" class="nav-item">
+            <span class="nav-icon">📰</span>
+            <span>新闻</span>
+        </a>
+        <a href="service.html" class="nav-item">
+            <span class="nav-icon">⚡</span>
+            <span>服务</span>
+        </a>
+        <a href="personal.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>课程表 - 校园生活</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/schedule.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <div class="back-btn" onclick="history.back()">
+                <span>‹</span>
+            </div>
+            <h1 class="page-title">课程表</h1>
+            <div class="week-selector" onclick="showWeekPicker()">
+                第8周 ▼
+            </div>
+        </div>
+    </header>
+
+    <!-- 日期导航 -->
+    <div class="date-nav">
+        <div class="date-item">
+            <span class="date-day">一</span>
+            <span class="date-num">15</span>
+        </div>
+        <div class="date-item active">
+            <span class="date-day">二</span>
+            <span class="date-num">16</span>
+        </div>
+        <div class="date-item">
+            <span class="date-day">三</span>
+            <span class="date-num">17</span>
+        </div>
+        <div class="date-item">
+            <span class="date-day">四</span>
+            <span class="date-num">18</span>
+        </div>
+        <div class="date-item">
+            <span class="date-day">五</span>
+            <span class="date-num">19</span>
+        </div>
+        <div class="date-item weekend">
+            <span class="date-day">六</span>
+            <span class="date-num">20</span>
+        </div>
+        <div class="date-item weekend">
+            <span class="date-day">日</span>
+            <span class="date-num">21</span>
+        </div>
+    </div>
+
+    <!-- 课程列表 -->
+    <div class="schedule-container">
+        <!-- 上午课程 -->
+        <div class="time-section">
+            <div class="time-header">上午</div>
+            
+            <div class="course-item">
+                <div class="course-time">
+                    <span class="time-slot">1-2节</span>
+                    <span class="time-range">08:00-09:40</span>
+                </div>
+                <div class="course-info">
+                    <h3 class="course-name">高等数学</h3>
+                    <p class="course-detail">
+                        <span>📍 教学楼A301</span>
+                        <span>👤 王教授</span>
+                    </p>
+                </div>
+                <div class="course-status ongoing">进行中</div>
+            </div>
+
+            <div class="course-item">
+                <div class="course-time">
+                    <span class="time-slot">3-4节</span>
+                    <span class="time-range">10:00-11:40</span>
+                </div>
+                <div class="course-info">
+                    <h3 class="course-name">数据结构与算法</h3>
+                    <p class="course-detail">
+                        <span>📍 实验楼B203</span>
+                        <span>👤 李老师</span>
+                    </p>
+                </div>
+                <div class="course-status">未开始</div>
+            </div>
+        </div>
+
+        <!-- 下午课程 -->
+        <div class="time-section">
+            <div class="time-header">下午</div>
+            
+            <div class="course-item">
+                <div class="course-time">
+                    <span class="time-slot">5-6节</span>
+                    <span class="time-range">14:00-15:40</span>
+                </div>
+                <div class="course-info">
+                    <h3 class="course-name">英语听力</h3>
+                    <p class="course-detail">
+                        <span>📍 语音室C105</span>
+                        <span>👤 张老师</span>
+                    </p>
+                </div>
+                <div class="course-status">未开始</div>
+            </div>
+
+            <div class="course-item empty">
+                <div class="course-time">
+                    <span class="time-slot">7-8节</span>
+                    <span class="time-range">16:00-17:40</span>
+                </div>
+                <div class="course-info">
+                    <p class="no-course">暂无课程</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 晚上课程 -->
+        <div class="time-section">
+            <div class="time-header">晚上</div>
+            
+            <div class="course-item">
+                <div class="course-time">
+                    <span class="time-slot">9-10节</span>
+                    <span class="time-range">19:00-20:40</span>
+                </div>
+                <div class="course-info">
+                    <h3 class="course-name">Web前端开发</h3>
+                    <p class="course-detail">
+                        <span>📍 机房D401</span>
+                        <span>👤 陈老师</span>
+                    </p>
+                </div>
+                <div class="course-status">未开始</div>
+            </div>
+        </div>
+
+        <!-- 今日备忘 -->
+        <div class="today-memo">
+            <h4>今日备忘</h4>
+            <div class="memo-item">
+                <span class="memo-dot"></span>
+                <span>数据结构作业截止</span>
+            </div>
+            <div class="memo-item">
+                <span class="memo-dot"></span>
+                <span>晚上7点小组讨论</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加课程按钮 -->
+    <div class="add-course-btn">
+        <span>+</span>
+    </div>
+
+    <!-- 底部导航 -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>首页</span>
+        </a>
+        <a href="news.html" class="nav-item">
+            <span class="nav-icon">📰</span>
+            <span>新闻</span>
+        </a>
+        <a href="service.html" class="nav-item">
+            <span class="nav-icon">⚡</span>
+            <span>服务</span>
+        </a>
+        <a href="personal.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/common.js"></script>
+    <script src="js/schedule.js"></script>
+</body>
+</html>

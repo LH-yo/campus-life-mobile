@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>校园生活 - 让校园生活更精彩</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/images.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="header-content">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1 class="logo">校园生活</h1>
+            <div class="user-icon" onclick="location.href='personal.html'">
+                <img src="images/user.svg" alt="个人中心">
+            </div>
+        </div>
+    </header>
+
+    <!-- 侧边菜单 -->
+    <nav class="side-menu" id="sideMenu">
+        <div class="menu-header">
+                <div class="logo-placeholder" style="width: 80px; height: 80px; font-size: 30px;"></div>
+            <span class="close-btn" onclick="toggleMenu()">×</span>
+        </div>
+        <ul class="menu-list">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="news.html">校园新闻</a></li>
+            <li><a href="schedule.html">课程表</a></li>
+            <li><a href="library.html">图书馆</a></li>
+            <li><a href="canteen.html">食堂</a></li>
+            <li><a href="activity.html">社团活动</a></li>
+            <li><a href="lost-found.html">失物招领</a></li>
+            <li><a href="market.html">二手市场</a></li>
+            <li><a href="forum.html">校园论坛</a></li>
+            <li><a href="service.html">便民服务</a></li>
+            <li><a href="about.html">关于我们</a></li>
+        </ul>
+    </nav>
+
+    <!-- 轮播图 -->
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="bannerWrapper">
+                <div class="swiper-slide active">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=400&fit=crop" alt="校园建筑" class="banner-img">
+                    <div class="banner-text">欢迎来到智慧校园</div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=400&fit=crop" alt="图书馆" class="banner-img">
+                    <div class="banner-text">美丽的校园等你探索</div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&h=400&fit=crop" alt="学生活动" class="banner-img">
+                    <div class="banner-text">精彩活动不容错过</div>
+                </div>
+            </div>
+            <div class="swiper-pagination">
+                <span class="dot active" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 快捷入口 -->
+    <section class="quick-entry">
+        <div class="entry-grid">
+            <div class="entry-item" onclick="location.href='schedule.html'">
+                <div class="entry-icon">📅</div>
+                <span>课程表</span>
+            </div>
+            <div class="entry-item" onclick="location.href='library.html'">
+                <div class="entry-icon">📚</div>
+                <span>图书馆</span>
+            </div>
+            <div class="entry-item" onclick="location.href='canteen.html'">
+                <div class="entry-icon">🍜</div>
+                <span>食堂</span>
+            </div>
+            <div class="entry-item" onclick="location.href='activity.html'">
+                <div class="entry-icon">🎨</div>
+                <span>社团</span>
+            </div>
+            <div class="entry-item" onclick="location.href='lost-found.html'">
+                <div class="entry-icon">🔍</div>
+                <span>失物招领</span>
+            </div>
+            <div class="entry-item" onclick="location.href='market.html'">
+                <div class="entry-icon">🛒</div>
+                <span>二手市场</span>
+            </div>
+            <div class="entry-item" onclick="location.href='forum.html'">
+                <div class="entry-icon">💬</div>
+                <span>校园论坛</span>
+            </div>
+            <div class="entry-item" onclick="location.href='service.html'">
+                <div class="entry-icon">🔧</div>
+                <span>便民服务</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 今日要闻 -->
+    <section class="today-news">
+        <div class="section-header">
+            <h2>今日要闻</h2>
+            <a href="news.html" class="more-link">更多 ></a>
+        </div>
+        <div class="news-list">
+            <article class="news-item" onclick="location.href='404.html'">
+                <div class="news-img">
+                    <img src="https://picsum.photos/120/90?random=1" alt="运动会" style="width:100%;height:100%;object-fit:cover;">
+                </div>
+                <div class="news-content">
+                    <h3>学校举办2024年春季运动会</h3>
+                    <p>青春飞扬，活力四射。我校春季运动会于本周隆重开幕...</p>
+                    <div class="news-meta">
+                        <span class="news-time">2小时前</span>
+                        <span class="news-views">1823次浏览</span>
+                    </div>
+                </div>
+            </article>
+            <article class="news-item" onclick="location.href='news-detail.html?id=2'">
+                <div class="news-img">
+                    <img src="https://picsum.photos/120/90?random=2" alt="图书馆" style="width:100%;height:100%;object-fit:cover;">
+                </div>
+                <div class="news-content">
+                    <h3>图书馆延长开放时间通知</h3>
+                    <p>为满足同学们的学习需求，图书馆将从下周起延长开放时间...</p>
+                    <div class="news-meta">
+                        <span class="news-time">5小时前</span>
+                        <span class="news-views">967次浏览</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 热门活动 -->
+    <section class="hot-activity">
+        <div class="section-header">
+            <h2>热门活动</h2>
+            <a href="activity.html" class="more-link">更多 ></a>
+        </div>
+        <div class="activity-scroll">
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=280&h=200&fit=crop" alt="音乐节" style="width: 100%; height: 100px; object-fit: cover;">
+                <div class="activity-info">
+                    <h4>校园音乐节</h4>
+                    <p class="activity-time">📅 4月15日 19:00</p>
+                    <p class="activity-location">📍 大礼堂</p>
+                </div>
+            </div>
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=280&h=200&fit=crop" alt="篮球赛" style="width: 100%; height: 100px; object-fit: cover;">
+                <div class="activity-info">
+                    <h4>篮球联赛</h4>
+                    <p class="activity-time">📅 4月16日 16:00</p>
+                    <p class="activity-location">📍 体育馆</p>
+                </div>
+            </div>
+            <div class="activity-card">
+                <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=280&h=200&fit=crop" alt="分享会" style="width: 100%; height: 100px; object-fit: cover;">
+                <div class="activity-info">
+                    <h4>创业分享会</h4>
+                    <p class="activity-time">📅 4月17日 14:00</p>
+                    <p class="activity-location">📍 报告厅</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部标签栏 -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span>首页</span>
+        </a>
+        <a href="news.html" class="nav-item">
+            <span class="nav-icon">📰</span>
+            <span>新闻</span>
+        </a>
+        <a href="service.html" class="nav-item">
+            <span class="nav-icon">⚡</span>
+            <span>服务</span>
+        </a>
+        <a href="personal.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

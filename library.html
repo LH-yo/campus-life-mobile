@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>图书馆 - 校园生活</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        .search-box {
+            padding: 15px;
+            background: #fff;
+            margin-top: 50px;
+        }
+        .search-input-box {
+            display: flex;
+            background: #f5f5f5;
+            border-radius: 20px;
+            padding: 8px 15px;
+        }
+        .search-input-box input {
+            flex: 1;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 14px;
+        }
+        .seat-status {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 15px;
+            background: #fff;
+            margin: 10px 0;
+        }
+        .status-card {
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .status-num {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .status-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .hot-books {
+            background: #fff;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .book-item {
+            display: flex;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .book-cover {
+            width: 60px;
+            height: 80px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            margin-right: 12px;
+        }
+        .book-info h4 {
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+        .book-info p {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="back-btn" onclick="history.back()">
+                <span>‹</span>
+            </div>
+            <h1 class="page-title">图书馆</h1>
+            <div class="qr-btn">📷</div>
+        </div>
+    </header>
+
+    <div class="search-box">
+        <div class="search-input-box">
+            <span>🔍</span>
+            <input type="text" placeholder="搜索图书、期刊...">
+        </div>
+    </div>
+
+    <div class="seat-status">
+        <div class="status-card">
+            <div class="status-num">468</div>
+            <div class="status-label">剩余座位</div>
+        </div>
+        <div class="status-card">
+            <div class="status-num">3</div>
+            <div class="status-label">待还图书</div>
+        </div>
+    </div>
+
+    <div class="hot-books">
+        <h3 style="margin-bottom: 15px;">热门推荐</h3>
+        <div class="book-item">
+            <div class="book-cover"></div>
+            <div class="book-info">
+                <h4>人工智能导论</h4>
+                <p>作者：李明 | 可借</p>
+                <p style="color: #ff9500;">⭐ 4.8分</p>
+            </div>
+        </div>
+        <div class="book-item">
+            <div class="book-cover"></div>
+            <div class="book-info">
+                <h4>算法导论</h4>
+                <p>作者：Thomas | 可借</p>
+                <p style="color: #ff9500;">⭐ 4.9分</p>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>首页</span>
+        </a>
+        <a href="news.html" class="nav-item">
+            <span class="nav-icon">📰</span>
+            <span>新闻</span>
+        </a>
+        <a href="service.html" class="nav-item">
+            <span class="nav-icon">⚡</span>
+            <span>服务</span>
+        </a>
+        <a href="personal.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+/* 首页样式 */
+body {
+    padding-top: 50px;
+}
+
+/* 轮播图 */
+.banner {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+    display: none;
+}
+
+.swiper-slide.active {
+    display: block;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* 轮播指示器 */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    width: 20px;
+    border-radius: 4px;
+    background: #fff;
+}
+
+/* 快捷入口 */
+.quick-entry {
+    background: #fff;
+    padding: 20px 15px;
+    margin-bottom: 10px;
+}
+
+.entry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.entry-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.entry-item:active {
+    transform: scale(0.95);
+}
+
+.entry-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right, rgba(74, 144, 226, 0.1), rgba(80, 200, 120, 0.1));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.entry-item span {
+    font-size: 12px;
+    color: #666;
+}
+
+/* 今日要闻 */
+.today-news {
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.news-list {
+    padding: 0 15px 15px;
+}
+
+.news-item {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item:active {
+    background: #f8f8f8;
+}
+
+.news-img {
+    width: 100px;
+    height: 75px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.news-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-content h3 {
+    font-size: 15px;
+    color: #333;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-content p {
+    font-size: 13px;
+    color: #999;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.news-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 11px;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+/* 热门活动 */
+.hot-activity {
+    background: #fff;
+    padding-bottom: 15px;
+}
+
+.activity-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 15px;
+    gap: 12px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.activity-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.activity-card {
+    flex-shrink: 0;
+    width: 140px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.activity-card:active {
+    transform: scale(0.95);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.activity-info {
+    padding: 10px;
+}
+
+.activity-info h4 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.activity-time,
+.activity-location {
+    font-size: 12px;
+    color: #999;
+    margin: 3px 0;
+}
+
+/* 小屏幕适配 */
+@media (max-width: 375px) {
+    .banner {
+        height: 150px;
+    }
+    
+    .entry-grid {
+        gap: 10px;
+    }
+    
+    .entry-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .news-img {
+        width: 85px;
+        height: 65px;
+    }
+}

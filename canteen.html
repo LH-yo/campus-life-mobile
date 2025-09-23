@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>食堂 - 校园生活</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        body { padding-top: 50px; }
+        .canteen-tabs {
+            display: flex;
+            padding: 10px 15px;
+            background: #fff;
+            overflow-x: auto;
+        }
+        .canteen-tab {
+            padding: 8px 15px;
+            margin-right: 10px;
+            background: #f5f5f5;
+            border-radius: 20px;
+            white-space: nowrap;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .canteen-tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+        .meal-time {
+            padding: 15px;
+            background: #fff;
+            margin: 10px 0;
+        }
+        .meal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .meal-title {
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .meal-status {
+            font-size: 12px;
+            padding: 4px 10px;
+            background: #4caf50;
+            color: #fff;
+            border-radius: 12px;
+        }
+        .meal-status.closed {
+            background: #999;
+        }
+        .dish-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .dish-item {
+            background: #f8f8f8;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .dish-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            background: #e0e0e0;
+            margin-right: 10px;
+        }
+        .dish-info {
+            flex: 1;
+        }
+        .dish-name {
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        .dish-price {
+            color: #ff6b6b;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        .queue-info {
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border-radius: 10px;
+            margin: 15px;
+        }
+        .queue-title {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .queue-stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .queue-num {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .queue-label {
+            font-size: 12px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="back-btn" onclick="history.back()">
+                <span>‹</span>
+            </div>
+            <h1 class="page-title">食堂</h1>
+            <div class="filter-btn">⚙️</div>
+        </div>
+    </header>
+
+    <div class="canteen-tabs">
+        <div class="canteen-tab active">第一食堂</div>
+        <div class="canteen-tab">第二食堂</div>
+        <div class="canteen-tab">第三食堂</div>
+        <div class="canteen-tab">清真食堂</div>
+        <div class="canteen-tab">教工食堂</div>
+    </div>
+
+    <div class="queue-info">
+        <div class="queue-title">实时排队情况</div>
+        <div class="queue-stats">
+            <div>
+                <div class="queue-num">23</div>
+                <div class="queue-label">当前排队</div>
+            </div>
+            <div>
+                <div class="queue-num">8</div>
+                <div class="queue-label">预计等待(分钟)</div>
+            </div>
+            <div>
+                <div class="queue-num">85%</div>
+                <div class="queue-label">座位使用率</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="meal-time">
+        <div class="meal-header">
+            <span class="meal-title">🌅 早餐 (6:30-9:00)</span>
+            <span class="meal-status closed">已结束</span>
+        </div>
+        <div class="dish-list">
+            <div class="dish-item">
+                <div class="dish-img"></div>
+                <div class="dish-info">
+                    <div class="dish-name">小笼包</div>
+                    <div class="dish-price">¥6.00</div>
+                </div>
+            </div>
+            <div class="dish-item">
+                <div class="dish-img"></div>
+                <div class="dish-info">
+                    <div class="dish-name">豆浆油条</div>
+                    <div class="dish-price">¥4.50</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="meal-time">
+        <div class="meal-header">
+            <span class="meal-title">☀️ 午餐 (11:00-13:30)</span>
+            <span class="meal-status">营业中</span>
+        </div>
+        <div class="dish-list">
+            <div class="dish-item">
+                <div class="dish-img"></div>
+                <div class="dish-info">
+                    <div class="dish-name">红烧肉套餐</div>
+                    <div class="dish-price">¥15.00</div>
+                </div>
+            </div>
+            <div class="dish-item">
+                <div class="dish-img"></div>
+                <div class="dish-info">
+                    <div class="dish-name">麻辣香锅</div>
+                    <div class="dish-price">¥18.00</div>
+                </div>
+            </div>
+            <div class="dish-item">
+                <div class="dish-img"></div>
+                <div class="dish-info">
+                    <div class="dish-name">黄焖鸡米饭</div>
+                    <div class="dish-price">¥12.00</div>
+                </div>
+            </div>
+            <div class="dish-item">
+                <div class="dish-img"></div>
+                <div class="dish-info">
+                    <div class="dish-name">兰州拉面</div>
+                    <div class="dish-price">¥10.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="meal-time">
+        <div class="meal-header">
+            <span class="meal-title">🌙 晚餐 (17:00-19:30)</span>
+            <span class="meal-status">未开始</span>
+        </div>
+        <div class="dish-list">
+            <div class="dish-item">
+                <div class="dish-img"></div>
+                <div class="dish-info">
+                    <div class="dish-name">糖醋排骨</div>
+                    <div class="dish-price">¥16.00</div>
+                </div>
+            </div>
+            <div class="dish-item">
+                <div class="dish-img"></div>
+                <div class="dish-info">
+                    <div class="dish-name">宫保鸡丁</div>
+                    <div class="dish-price">¥13.00</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>首页</span>
+        </a>
+        <a href="news.html" class="nav-item">
+            <span class="nav-icon">📰</span>
+            <span>新闻</span>
+        </a>
+        <a href="service.html" class="nav-item">
+            <span class="nav-icon">⚡</span>
+            <span>服务</span>
+        </a>
+        <a href="personal.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/common.js"></script>
+</body>
+</html>

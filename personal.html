@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>个人中心 - 校园生活</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/images.css">
+</head>
+<body>
+    <!-- 个人信息头部 -->
+    <div class="profile-header">
+        <div class="profile-bg"></div>
+        <div class="profile-content">
+            <div class="avatar-box">
+                <div class="avatar avatar-placeholder"></div>
+                <span class="edit-avatar">📷</span>
+            </div>
+            <h2 class="username">张同学</h2>
+            <p class="user-info">计算机科学与技术 · 2021级</p>
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-num">128</span>
+                    <span class="stat-label">动态</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">456</span>
+                    <span class="stat-label">关注</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-num">789</span>
+                    <span class="stat-label">粉丝</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 功能菜单 -->
+    <div class="menu-section">
+        <div class="menu-group">
+            <div class="menu-item" onclick="location.href='my-schedule.html'">
+                <span class="menu-icon">📅</span>
+                <span class="menu-text">我的课表</span>
+                <span class="menu-arrow">›</span>
+            </div>
+            <div class="menu-item" onclick="location.href='my-scores.html'">
+                <span class="menu-icon">📊</span>
+                <span class="menu-text">成绩查询</span>
+                <span class="menu-arrow">›</span>
+            </div>
+            <div class="menu-item" onclick="location.href='my-library.html'">
+                <span class="menu-icon">📚</span>
+                <span class="menu-text">借阅记录</span>
+                <span class="menu-arrow">›</span>
+                <span class="menu-badge">3</span>
+            </div>
+        </div>
+
+        <div class="menu-group">
+            <div class="menu-item" onclick="location.href='my-activities.html'">
+                <span class="menu-icon">🎯</span>
+                <span class="menu-text">我的活动</span>
+                <span class="menu-arrow">›</span>
+            </div>
+            <div class="menu-item" onclick="location.href='my-posts.html'">
+                <span class="menu-icon">✏️</span>
+                <span class="menu-text">我的发布</span>
+                <span class="menu-arrow">›</span>
+            </div>
+            <div class="menu-item" onclick="location.href='my-favorites.html'">
+                <span class="menu-icon">⭐</span>
+                <span class="menu-text">我的收藏</span>
+                <span class="menu-arrow">›</span>
+            </div>
+        </div>
+
+        <div class="menu-group">
+            <div class="menu-item" onclick="location.href='settings.html'">
+                <span class="menu-icon">⚙️</span>
+                <span class="menu-text">设置</span>
+                <span class="menu-arrow">›</span>
+            </div>
+            <div class="menu-item" onclick="location.href='feedback.html'">
+                <span class="menu-icon">💬</span>
+                <span class="menu-text">意见反馈</span>
+                <span class="menu-arrow">›</span>
+            </div>
+            <div class="menu-item" onclick="location.href='about.html'">
+                <span class="menu-icon">ℹ️</span>
+                <span class="menu-text">关于我们</span>
+                <span class="menu-arrow">›</span>
+            </div>
+        </div>
+
+        <div class="logout-btn" onclick="handleLogout()">
+            退出登录
+        </div>
+    </div>
+
+    <!-- 底部导航 -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>首页</span>
+        </a>
+        <a href="news.html" class="nav-item">
+            <span class="nav-icon">📰</span>
+            <span>新闻</span>
+        </a>
+        <a href="service.html" class="nav-item">
+            <span class="nav-icon">⚡</span>
+            <span>服务</span>
+        </a>
+        <a href="personal.html" class="nav-item active">
+            <span class="nav-icon">👤</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/common.js"></script>
+    <script src="js/personal.js"></script>
+</body>
+</html>

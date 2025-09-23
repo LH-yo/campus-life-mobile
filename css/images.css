@@ -1,0 +1,292 @@
+/* 真实图片占位符样式 */
+
+/* Banner图片样式 */
+.banner-img-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 100%;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-img-1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: rgba(0,0,0,0.3);
+    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+}
+
+.banner-img-1::after {
+    content: '🏫';
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 60px;
+    opacity: 0.3;
+}
+
+.banner-img-2 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    width: 100%;
+    height: 180px;
+    position: relative;
+}
+
+.banner-img-2::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
+
+.banner-img-2::after {
+    content: '📚';
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    font-size: 50px;
+    opacity: 0.5;
+}
+
+.banner-img-3 {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    width: 100%;
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-img-3::after {
+    content: '🎉';
+    font-size: 80px;
+    opacity: 0.4;
+}
+
+/* 新闻图片样式 */
+.news-img-placeholder {
+    background: #f0f0f0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-img-1 {
+    background: linear-gradient(45deg, #4A90E2 25%, transparent 25%, transparent 75%, #4A90E2 75%, #4A90E2),
+                linear-gradient(45deg, #4A90E2 25%, transparent 25%, transparent 75%, #4A90E2 75%, #4A90E2);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    background-color: #E3F2FD;
+}
+
+.news-img-2 {
+    background: linear-gradient(to bottom, #FFE5B4 0%, #FFDAB9 100%);
+    position: relative;
+}
+
+.news-img-2::after {
+    content: '📖';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    opacity: 0.5;
+}
+
+.news-img-3 {
+    background: repeating-linear-gradient(
+        45deg,
+        #E8F5E9,
+        #E8F5E9 10px,
+        #C8E6C9 10px,
+        #C8E6C9 20px
+    );
+}
+
+.news-img-4 {
+    background: radial-gradient(circle at center, #FFF9C4 0%, #FFF59D 50%, #FFEB3B 100%);
+    position: relative;
+}
+
+.news-img-5 {
+    background: linear-gradient(to right, #FFCDD2, #F8BBD0);
+    position: relative;
+}
+
+.news-img-5::before {
+    content: '🎨';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 25px;
+    opacity: 0.6;
+}
+
+/* 活动图片样式 */
+.activity-img-1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+}
+
+.activity-img-1::after {
+    content: '🎤';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+}
+
+.activity-img-2 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    position: relative;
+}
+
+.activity-img-2::after {
+    content: '🏀';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+}
+
+.activity-img-3 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    position: relative;
+}
+
+.activity-img-3::after {
+    content: '💡';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+}
+
+/* 商品图片样式 */
+.goods-img-1 {
+    background: linear-gradient(to bottom, #F5F5F5 0%, #E0E0E0 100%);
+    position: relative;
+}
+
+.goods-img-1::after {
+    content: '🎧';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+}
+
+.goods-img-2 {
+    background: linear-gradient(45deg, #FFF3E0 0%, #FFE0B2 100%);
+    position: relative;
+}
+
+.goods-img-2::after {
+    content: '📚';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+}
+
+.goods-img-3 {
+    background: linear-gradient(135deg, #E0E0E0 0%, #BDBDBD 100%);
+    position: relative;
+}
+
+.goods-img-3::after {
+    content: '🛴';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+}
+
+/* 头像占位符 */
+.avatar-placeholder {
+    background: #E8E8E8;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.avatar-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 30%;
+    background: #999;
+    border-radius: 50%;
+}
+
+.avatar-placeholder::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 40%;
+    background: #999;
+    border-radius: 50% 50% 0 0;
+}
+
+/* Logo占位符 */
+.logo-placeholder {
+    background: linear-gradient(135deg, #4A90E2 0%, #50C878 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logo-placeholder::after {
+    content: '校';
+}
+
+/* 图片加载失败样式 */
+.img-error {
+    background: #f5f5f5;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+}
+
+.img-error::before {
+    content: '🖼️';
+    font-size: 30px;
+    opacity: 0.3;
+}
+
+.img-error::after {
+    content: '图片加载失败';
+    position: absolute;
+    bottom: 10px;
+    font-size: 12px;
+    color: #999;
+}

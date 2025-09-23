@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>失物招领 - 校园生活</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/images.css">
+    <style>
+        body { padding-top: 95px; background: #f5f5f5; }
+        .type-tabs {
+            position: fixed;
+            top: 50px;
+            left: 0;
+            right: 0;
+            height: 45px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #f0f0f0;
+            z-index: 99;
+        }
+        .type-tab {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 15px;
+            color: #666;
+            cursor: pointer;
+            position: relative;
+        }
+        .type-tab.active {
+            color: #667eea;
+        }
+        .type-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            right: 20%;
+            height: 3px;
+            background: #667eea;
+            border-radius: 3px;
+        }
+        .publish-btn {
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 28px;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            z-index: 100;
+            cursor: pointer;
+        }
+        .item-list {
+            padding: 10px 15px;
+        }
+        .item-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .item-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .item-type {
+            padding: 4px 8px;
+            background: #ff9500;
+            color: #fff;
+            font-size: 12px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .item-type.found {
+            background: #4caf50;
+        }
+        .item-time {
+            font-size: 12px;
+            color: #999;
+            margin-left: auto;
+        }
+        .item-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .item-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .item-images {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .item-img {
+            width: 80px;
+            height: 80px;
+            background: #f0f0f0;
+            border-radius: 5px;
+        }
+        .item-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 10px;
+            border-top: 1px solid #f0f0f0;
+        }
+        .item-location {
+            font-size: 13px;
+            color: #999;
+        }
+        .contact-btn {
+            padding: 5px 15px;
+            background: #667eea;
+            color: #fff;
+            border-radius: 15px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .search-bar {
+            padding: 10px 15px;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 8px 15px;
+            background: #f5f5f5;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="back-btn" onclick="history.back()">
+                <span>‹</span>
+            </div>
+            <h1 class="page-title">失物招领</h1>
+            <div class="filter-btn">筛选</div>
+        </div>
+    </header>
+
+    <div class="type-tabs">
+        <div class="type-tab active">全部</div>
+        <div class="type-tab">失物</div>
+        <div class="type-tab">招领</div>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="搜索物品名称、描述...">
+    </div>
+
+    <div class="item-list">
+        <div class="item-card">
+            <div class="item-header">
+                <span class="item-type">失物</span>
+                <span class="item-time">2小时前</span>
+            </div>
+            <h3 class="item-title">丢失黑色钱包</h3>
+            <p class="item-desc">今天中午在第二食堂吃饭时不慎丢失黑色钱包一个，里面有身份证、校园卡和少量现金，如有拾到请联系我，必有重谢！</p>
+            <div class="item-images">
+                <div class="item-img"></div>
+            </div>
+            <div class="item-footer">
+                <span class="item-location">📍 第二食堂</span>
+                <span class="contact-btn" onclick="location.href='404.html'; event.stopPropagation();">联系失主</span>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-header">
+                <span class="item-type found">招领</span>
+                <span class="item-time">5小时前</span>
+            </div>
+            <h3 class="item-title">捡到一串钥匙</h3>
+            <p class="item-desc">在图书馆三楼自习室捡到一串钥匙，有5把钥匙和一个小熊挂件，失主请联系认领。</p>
+            <div class="item-images">
+                <div class="item-img"></div>
+                <div class="item-img"></div>
+            </div>
+            <div class="item-footer">
+                <span class="item-location">📍 图书馆三楼</span>
+                <span class="contact-btn">联系拾主</span>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-header">
+                <span class="item-type">失物</span>
+                <span class="item-time">昨天</span>
+            </div>
+            <h3 class="item-title">遗失蓝色雨伞</h3>
+            <p class="item-desc">昨天下午在教学楼A栋遗失一把蓝色折叠雨伞，伞柄有破损，对我很重要，望拾到者联系。</p>
+            <div class="item-footer">
+                <span class="item-location">📍 教学楼A栋</span>
+                <span class="contact-btn" onclick="location.href='404.html'; event.stopPropagation();">联系失主</span>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-header">
+                <span class="item-type found">招领</span>
+                <span class="item-time">昨天</span>
+            </div>
+            <h3 class="item-title">拾到学生证</h3>
+            <p class="item-desc">在篮球场捡到2021级计算机专业的学生证一张，请失主尽快来认领。</p>
+            <div class="item-footer">
+                <span class="item-location">📍 篮球场</span>
+                <span class="contact-btn">联系拾主</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="publish-btn">+</div>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>首页</span>
+        </a>
+        <a href="news.html" class="nav-item">
+            <span class="nav-icon">📰</span>
+            <span>新闻</span>
+        </a>
+        <a href="service.html" class="nav-item">
+            <span class="nav-icon">⚡</span>
+            <span>服务</span>
+        </a>
+        <a href="personal.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span>我的</span>
+        </a>
+    </nav>
+
+    <script src="js/common.js"></script>
+</body>
+</html>

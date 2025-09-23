@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>新闻详情 - 校园生活</title>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        body {
+            background: #f5f5f5;
+            padding-top: 50px;
+            padding-bottom: 20px;
+        }
+        .article-container {
+            background: #fff;
+            padding: 20px 15px;
+        }
+        .article-title {
+            font-size: 20px;
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        .article-meta {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #999;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 20px;
+        }
+        .article-meta span {
+            margin-right: 15px;
+        }
+        .article-content {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.8;
+        }
+        .article-content p {
+            margin-bottom: 15px;
+            text-indent: 2em;
+        }
+        .content-deleted {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+            color: #856404;
+        }
+        .content-deleted .icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .article-images {
+            margin: 20px 0;
+        }
+        .article-image {
+            width: 100%;
+            height: 200px;
+            background: #f0f0f0;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        .related-news {
+            background: #fff;
+            margin-top: 10px;
+            padding: 15px;
+        }
+        .related-title {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .related-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #f5f5f5;
+            cursor: pointer;
+        }
+        .related-item:last-child {
+            border-bottom: none;
+        }
+        .related-item-title {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .related-item-time {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="back-btn" onclick="history.back()">
+                <span>‹</span>
+            </div>
+            <h1 class="page-title">新闻详情</h1>
+            <div class="share-btn">分享</div>
+        </div>
+    </header>
+
+    <article class="article-container">
+        <h1 class="article-title">图书馆延长开放时间通知</h1>
+        <div class="article-meta">
+            <span>图书馆</span>
+            <span>2024-04-15 14:30</span>
+            <span>阅读 5126</span>
+        </div>
+        
+        <div class="article-content">
+            <p>为满足广大同学的学习需求，经学校研究决定，从下周一（4月22日）起，图书馆将延长开放时间，具体安排如下：</p>
+            
+            <p>一、开放时间调整：周一至周五：早上7:00 - 晚上23:00；周六、周日：早上8:00 - 晚上22:00。</p>
+            
+            <div class="content-deleted">
+                <div class="icon">⚠️</div>
+                <div>部分内容已被删除或暂时无法显示</div>
+                <small>可能包含过期信息或正在更新中</small>
+            </div>
+            
+            <p>二、注意事项：请同学们遵守图书馆管理规定，保持安静，爱护公共设施。晚上离馆时请带好个人物品，注意安全。</p>
+            
+            <div class="article-images">
+                <div class="article-image">
+                    <span>🖼️ 图片加载失败</span>
+                </div>
+            </div>
+            
+            <p>三、其他说明：考试周期间，图书馆将24小时开放，具体时间另行通知。如有疑问，可咨询图书馆服务台或拨打电话：xxx-xxxxxxxx。</p>
+        </div>
+    </article>
+
+    <div class="related-news">
+        <h3 class="related-title">相关新闻</h3>
+        <div class="related-item" onclick="location.href='404.html'">
+            <div class="related-item-title">图书馆新增电子阅览室</div>
+            <div class="related-item-time">2天前</div>
+        </div>
+        <div class="related-item" onclick="location.href='404.html'">
+            <div class="related-item-title">期末考试期间图书馆座位预约通知</div>
+            <div class="related-item-time">1周前</div>
+        </div>
+        <div class="related-item" onclick="location.href='news.html'">
+            <div class="related-item-title">返回新闻列表</div>
+            <div class="related-item-time">查看更多</div>
+        </div>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script>
+        // 模拟部分内容加载失败
+        setTimeout(function() {
+            var deleted = document.querySelector('.content-deleted');
+            if (deleted) {
+                deleted.style.animation = 'pulse 2s infinite';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

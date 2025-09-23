@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图片占位符生成器</title>
+</head>
+<body>
+    <h3>使用说明：这个页面用于生成占位图片</h3>
+    
+    <!-- Banner图片 -->
+    <canvas id="banner1" width="375" height="180"></canvas>
+    <canvas id="banner2" width="375" height="180"></canvas>
+    <canvas id="banner3" width="375" height="180"></canvas>
+    
+    <!-- 新闻图片 -->
+    <canvas id="news1" width="300" height="200"></canvas>
+    <canvas id="news2" width="300" height="200"></canvas>
+    
+    <!-- 活动图片 -->
+    <canvas id="activity1" width="280" height="200"></canvas>
+    <canvas id="activity2" width="280" height="200"></canvas>
+    <canvas id="activity3" width="280" height="200"></canvas>
+    
+    <!-- 用户头像 -->
+    <canvas id="avatar" width="100" height="100"></canvas>
+    
+    <!-- Logo -->
+    <canvas id="logo" width="100" height="100"></canvas>
+
+    <script>
+        // Banner 1 - 校园风景
+        var c1 = document.getElementById('banner1');
+        var ctx1 = c1.getContext('2d');
+        var gradient1 = ctx1.createLinearGradient(0, 0, 375, 180);
+        gradient1.addColorStop(0, '#87CEEB');
+        gradient1.addColorStop(1, '#98FB98');
+        ctx1.fillStyle = gradient1;
+        ctx1.fillRect(0, 0, 375, 180);
+        ctx1.fillStyle = '#fff';
+        ctx1.font = '20px Arial';
+        ctx1.fillText('欢迎来到智慧校园', 100, 100);
+        
+        // Banner 2 - 图书馆
+        var c2 = document.getElementById('banner2');
+        var ctx2 = c2.getContext('2d');
+        var gradient2 = ctx2.createLinearGradient(0, 0, 375, 180);
+        gradient2.addColorStop(0, '#FFE4B5');
+        gradient2.addColorStop(1, '#FFB6C1');
+        ctx2.fillStyle = gradient2;
+        ctx2.fillRect(0, 0, 375, 180);
+        ctx2.fillStyle = '#fff';
+        ctx2.font = '20px Arial';
+        ctx2.fillText('美丽的校园等你探索', 90, 100);
+        
+        // Banner 3 - 活动
+        var c3 = document.getElementById('banner3');
+        var ctx3 = c3.getContext('2d');
+        var gradient3 = ctx3.createLinearGradient(0, 0, 375, 180);
+        gradient3.addColorStop(0, '#DDA0DD');
+        gradient3.addColorStop(1, '#F0E68C');
+        ctx3.fillStyle = gradient3;
+        ctx3.fillRect(0, 0, 375, 180);
+        ctx3.fillStyle = '#fff';
+        ctx3.font = '20px Arial';
+        ctx3.fillText('精彩活动不容错过', 100, 100);
+        
+        // 新闻图片1
+        var n1 = document.getElementById('news1');
+        var ctxn1 = n1.getContext('2d');
+        ctxn1.fillStyle = '#E6F3FF';
+        ctxn1.fillRect(0, 0, 300, 200);
+        ctxn1.fillStyle = '#4A90E2';
+        ctxn1.fillRect(20, 20, 260, 120);
+        ctxn1.fillStyle = '#fff';
+        ctxn1.font = '16px Arial';
+        ctxn1.fillText('运动会', 120, 80);
+        
+        // 新闻图片2
+        var n2 = document.getElementById('news2');
+        var ctxn2 = n2.getContext('2d');
+        ctxn2.fillStyle = '#FFF5E6';
+        ctxn2.fillRect(0, 0, 300, 200);
+        ctxn2.fillStyle = '#FF9500';
+        ctxn2.fillRect(20, 20, 260, 120);
+        ctxn2.fillStyle = '#fff';
+        ctxn2.font = '16px Arial';
+        ctxn2.fillText('图书馆', 120, 80);
+        
+        // 活动图片
+        ['activity1', 'activity2', 'activity3'].forEach(function(id, index) {
+            var canvas = document.getElementById(id);
+            var ctx = canvas.getContext('2d');
+            var colors = ['#FFE4E1', '#E1F5FE', '#F3E5F5'];
+            ctx.fillStyle = colors[index];
+            ctx.fillRect(0, 0, 280, 200);
+            ctx.fillStyle = '#666';
+            ctx.font = '14px Arial';
+            var texts = ['音乐节', '篮球赛', '讲座'];
+            ctx.fillText(texts[index], 110, 100);
+        });
+        
+        // 头像
+        var avatar = document.getElementById('avatar');
+        var ctxa = avatar.getContext('2d');
+        ctxa.fillStyle = '#E8E8E8';
+        ctxa.fillRect(0, 0, 100, 100);
+        ctxa.beginPath();
+        ctxa.arc(50, 35, 20, 0, 2 * Math.PI);
+        ctxa.fillStyle = '#999';
+        ctxa.fill();
+        ctxa.beginPath();
+        ctxa.arc(50, 80, 35, Math.PI, 0);
+        ctxa.fill();
+        
+        // Logo
+        var logo = document.getElementById('logo');
+        var ctxl = logo.getContext('2d');
+        var gradientL = ctxl.createRadialGradient(50, 50, 10, 50, 50, 40);
+        gradientL.addColorStop(0, '#4A90E2');
+        gradientL.addColorStop(1, '#50C878');
+        ctxl.fillStyle = gradientL;
+        ctxl.fillRect(0, 0, 100, 100);
+        ctxl.fillStyle = '#fff';
+        ctxl.font = 'bold 30px Arial';
+        ctxl.fillText('校', 35, 60);
+        
+        // 保存所有canvas为图片
+        setTimeout(function() {
+            var canvases = document.querySelectorAll('canvas');
+            canvases.forEach(function(canvas) {
+                var link = document.createElement('a');
+                link.download = canvas.id + '.png';
+                link.href = canvas.toDataURL();
+                document.body.appendChild(link);
+                var img = document.createElement('img');
+                img.src = canvas.toDataURL();
+                img.style.display = 'block';
+                img.style.margin = '10px';
+                document.body.appendChild(img);
+            });
+        }, 100);
+    </script>
+</body>
+</html>
